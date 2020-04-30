@@ -16,7 +16,7 @@ end
 
 client = login_twitter
 
-client.search('#bonjour_monde').take(25).each do |tweet|
+client.search('#bonjour_monde', result_type:"recent").take(25).each do |tweet|
     client.fav tweet
 end
 binding.pry
